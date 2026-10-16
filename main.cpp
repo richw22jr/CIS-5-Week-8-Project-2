@@ -26,7 +26,7 @@ int main() {
   scores[0] = scoreAt0;
   const int scoreAt27 = 75; // change this number **Done
   scores[10] = scoreAt10;
-  scores[20] = 100;
+  scores[20] = scoreAt20;  // ?
   scores[27] = scoreAt27;
 
   cout << "[" << i << "] " << scores[i] << endl;
@@ -40,25 +40,25 @@ int main() {
   // Print A:, B:, C:, D:, and F:. The five totals add up to 30.
   for (int i = 0; i < N; ++i) {
     if (scores[i] >= 90) 
-    { 
+     { 
       ++A;
-    }
+     }
     if (scores[i] >= 80 && scores[i] <= 89)
-    {
+     { 
       ++B;
-    }
+     }
     if (scores[i] >= 70 && scores[i] <= 79)
-    {
+     {
       ++C;
-    }
+     }
     if (scores[i] >= 60 && scores[i] <= 69)
-    {
+     {
       ++D;
-    }
+     }
     if (scores[i] < 60)
-    {
+     {
       ++F;
-    }
+     }
     
   }
   cout << "A: " << A << endl;
@@ -68,11 +68,11 @@ int main() {
   cout << "F: " << F << endl;
   cout << "The students at the following indexes need to come to office hours: " << endl;
   
-  int fails = 0 ;
-  while (fails < N) {
-    if (scores[fails] < 60) {
-      cout << fails << " ";
-    } fails++;
+  int i = 0 ;
+  while (i < N) {
+    if (scores[i] < 60) {
+      cout << "Student at index [" << i << "]" << " needs to come to office hours" << endl;
+    } i++;
   }
   cout << endl;
    
